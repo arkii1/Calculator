@@ -19,8 +19,7 @@ let decimalButton = document.getElementById('decimal-button');
 let equalsButton = document.getElementById('equals-button');
 let multiplyButton = document.getElementById('multiply-button');
 
-let answerText = document.getElementById('answer-text');
-let operationText = document.getElementById('operation-text');
+let screenText = document.getElementById('screen-text');
 
 zeroButton.onclick = () => addElement(0);
 oneButton.onclick = () => addElement(1);
@@ -46,14 +45,17 @@ clearButton.onclick = () => clearAllElements();
 backspaceButton.onclick = () => deleteLastElement();
 
 const operations = {
-    ADD: "add",
-    MINUS: "minus",
-    DIVIDE: "divide",
-    MULTIPLY: "multiply",
-    DECIMAL: "decimal",
-    POWER: "power",
-    MODULUS: "modulus",
+    ADD: "+",
+    MINUS: "-",
+    DIVIDE: "/",
+    MULTIPLY: "*",
+    DECIMAL: ".",
+    POWER: "^",
+    MODULUS: "%",
 }
+
+if(screenText == null)
+    console.log("screen test is null");
 
 let operationArray = [];
 let lastEntryIsNumber = false;
@@ -73,13 +75,23 @@ function deleteLastElement(){
         operationArray[operationArray.length - 1] = parseFloat(newValue);
     }
 
-    lastEntryIsNumber = isNumber(operationArray.length - 1);
+    lastEntryIsNumber = isNumber(operationArray.length - 1) && operationArray.length > 0;
+    updateText();
     console.log(operationArray);
+}
+
+function updateText(){
+    let str = "";
+    operationArray.forEach(element => {
+        str += ("" + element);
+    });
+    screenText.innerHTML = str == "" ? "0" : str;
 }
 
 function clearAllElements(){
     operationArray = [];
     lastEntryIsNumber = false;
+    updateText();
 }
 
 function addElement(element)
@@ -93,6 +105,7 @@ function addElement(element)
         lastEntryIsNumber = isNumber(element);
     }
     console.log(operationArray);
+    updateText();
 } 
 
 function convertToDecimal(a, b){
@@ -230,5 +243,6 @@ function calculateAnswer()
     else{
         console.log("Answer: " + operationArray[0]);
     }
-    
+
+    updateText();
 }
