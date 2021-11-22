@@ -2,7 +2,14 @@ body
 {
     background-color: #fbe8a6;
     font-family: 'Roboto', sans-serif;
+    margin-bottom: 100px;
+
 }
+
+html {
+    position: relative;
+    min-height: 100%;
+  }
 
 .main-container
 {
@@ -70,7 +77,7 @@ button
     color: #303c6c;
 
     border: none;
-    border-radius: 50%;
+    border-radius: 25%;
     box-shadow: 4px 3px 2px 0px #303c6c;
 
     margin: 5px;
@@ -93,4 +100,24 @@ button:active
 {
     transform: scale(0.95);            
     background-color: #889a9e;
+}
+
+.footer-container
+{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.footer-text
+{
+    font-size: 20px;
+    color: #f4976c;
+    text-align: center;
 }
