@@ -1,6 +1,6 @@
 body
 {
-    background-color: #fbe8a6;
+    background-color: #45a29e;
     font-family: 'Roboto', sans-serif;
     margin-bottom: 100px;
 
@@ -22,32 +22,24 @@ html {
 .calculator-container
 {
     margin-top: 250px;
-    background-color: #d2fdff;
-    box-shadow: 8px 7px 2px 0px #303c6c;
+    background-color: #0b0c10;
+    /* box-shadow: 8px 7px 2px 0px #303c6c; */
+    box-shadow: 5px 5px 12px rgba(0,0,0,0.5);
     width: auto;
     height: auto;
-    border-radius: 1%;
+    border-radius: 3% / 2%;
 }
 
 .screen-container
 {
-    background-color: #303c6c;
-    border: 2px solid #303c6c;
+    background-color: #171d25;
+    border: none;
     height: auto;
     width: auto;
 
     margin: 10px 10px;
     border-radius: 1% / 5%;
 
-}
-
-.operation-text
-{
-    text-align: end;
-    position: relative;
-    font-size: 30px;
-    bottom: 0px;
-    margin: 0px 5px;
 }
 
 .screen-text
@@ -57,7 +49,7 @@ html {
     font-size: 80px;
     bottom: 0px;
     margin: 0px 5px;
-    color: #d2fdff;
+    color: #c5c6c7;
 }
 
 .buttons-container
@@ -73,12 +65,12 @@ button
     height: 100px;
     width: 100px;
 
-    background-color: #b4dfe5;              /*66a5ad*/
-    color: #303c6c;
+    background-color: #1f2833;            /*66a5ad*/
+    color: #c5c6c7;
 
     border: none;
     border-radius: 25%;
-    box-shadow: 4px 3px 2px 0px #303c6c;
+    box-shadow: 5px 5px 4px rgba(0,0,0,0.5);
 
     margin: 5px;
 
@@ -90,7 +82,8 @@ button
 
 button:hover
 {
-    background-color: #a7bdc2;
+    background-color: #59ccc4;
+    color: #ececec;
     transform: scale(1.05);
     
     transition: transform .1s;
@@ -98,8 +91,8 @@ button:hover
 
 button:active
 {
-    transform: scale(0.95);            
-    background-color: #889a9e;
+    transform: scale(0.9);            
+    background-color: #1f2833;
 }
 
 .footer-container
@@ -118,6 +111,6 @@ button:active
 .footer-text
 {
     font-size: 20px;
-    color: #f4976c;
+    color: #0b0c10;
     text-align: center;
 }
