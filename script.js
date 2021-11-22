@@ -96,6 +96,9 @@ function clearAllElements(){
 
 function addElement(element)
 {
+    if(operationArray.length > 6)
+        return;
+
     if(lastEntryIsNumber && isNumber(element)) {
         operationArray[operationArray.length - 1] = concatenateNumbers(operationArray[operationArray.length - 1], element);
         lastEntryIsNumber = true;
