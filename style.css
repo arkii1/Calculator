@@ -1,6 +1,6 @@
 body
 {
-    background-color: #c4dfe6;
+    background-color: #fbe8a6;
     font-family: 'Roboto', sans-serif;
 }
 
@@ -15,8 +15,8 @@ body
 .calculator-container
 {
     margin-top: 250px;
-    background-color: #66a5ad;
-    box-shadow: 2px 1px 1px 1px #003b46;
+    background-color: #d2fdff;
+    box-shadow: 8px 7px 2px 0px #303c6c;
     width: auto;
     height: auto;
     border-radius: 1%;
@@ -24,12 +24,13 @@ body
 
 .screen-container
 {
-    background-color: #003b46;
-    border: 2px solid #003b46;
+    background-color: #303c6c;
+    border: 2px solid #303c6c;
     height: auto;
     width: auto;
 
     margin: 10px 10px;
+    border-radius: 1% / 5%;
 
 }
 
@@ -42,13 +43,14 @@ body
     margin: 0px 5px;
 }
 
-.answer-text
+.screen-text
 {
     text-align: end;
     position: relative;
-    font-size: 40px;
+    font-size: 80px;
     bottom: 0px;
     margin: 0px 5px;
+    color: #d2fdff;
 }
 
 .buttons-container
@@ -64,12 +66,12 @@ button
     height: 100px;
     width: 100px;
 
-    background-color: #c4dfe6;              /*66a5ad*/
-    color: #66a5ad;
+    background-color: #b4dfe5;              /*66a5ad*/
+    color: #303c6c;
 
-    border: 2px solid #003b46;
+    border: none;
     border-radius: 50%;
-    box-shadow: 2px 1px 1px 1px #003b46;
+    box-shadow: 4px 3px 2px 0px #303c6c;
 
     margin: 5px;
 
